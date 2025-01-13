@@ -1,5 +1,7 @@
 FROM postgres:15
 
-COPY scripts/init.sql /docker-entrypoint-initdb.d/
+# COPY scripts/init.sql /docker-entrypoint-initdb.d/
+COPY data/ecommerce_restored.sql /docker-entrypoint-initdb.d/
 
 EXPOSE 5432
+
