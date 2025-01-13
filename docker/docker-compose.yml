@@ -19,7 +19,6 @@ services:
       - postgres
     ports:
       - "8501:8501"
-    # volumes:
-      # - ../app:/app
     volumes:
       - ../:/app
+    command: streamlit run app.py --server.runOnSave true
